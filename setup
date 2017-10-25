@@ -12,6 +12,8 @@ ln -s .zshrc ~/.
 brew install zsh
 brew install task
 brew install thefuck
+brew install ag
+brew install httpie
 
 # Basic
 brew cask install google-chrome
@@ -34,3 +36,6 @@ brew cask install pophub
 brew cask install istat-menus
 brew cask install numi
 brew cask install spotify
+
+# pip
+curl https://bootstrap.pypa.io/get-pip.py | sudo python

@@ -80,7 +80,7 @@ export PATH="$PATH:/usr/local/bin:/bin:/usr/bin:/usr/sbin:/sbin:~/bin"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export PATH=$PATH:~/bin:~/Applications/ADT/sdk/platform-tools:/opt/chefdk/bin
-if which -s rbenv ; then
+if which -s rbenv > /dev/null ; then
   eval "$(rbenv init -)"
 fi
 export LANG=en_US.UTF-8
@@ -97,7 +97,7 @@ alias dev-logs="cd ~/devel/vagrant-dev-machine && multitail --mergeall -l 'vagra
 alias vagrant-reload="rm -r .vagrant/machines/*/virtualbox/synced_folders;vagrant reload"
 
 
-export EDITOR="subl -w"
+export EDITOR="code -w"
 export DEFAULT_USER=erabinovich
 export ANDROID_HOME=/Users/erabinovich/Library/Android/sdk
 
