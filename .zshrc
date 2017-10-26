@@ -86,35 +86,18 @@ fi
 export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 
-
 export DISABLE_UPDATE_PROMPT=true
 
-
-alias assets_precompile="cd ~/devel/vagrant-dev-machine &&vagrant ssh dev_machine -c 'cd /mnt/app/current && bundle install && bundle exec rake assets:precompile && bundle exec rake assets:clean' && cd ~/devel/comparador"
-
-alias dev-logs="cd ~/devel/vagrant-dev-machine && multitail --mergeall -l 'vagrant ssh -- sudo tail -f /var/log/upstart/sidekiq-comparador.log' -cT ANSI -l 'vagrant ssh dev_machine -- tail -f /mnt/app/current/log/development.log'"
-
-alias vagrant-reload="rm -r .vagrant/machines/*/virtualbox/synced_folders;vagrant reload"
-
-
 export EDITOR="code -w"
-export DEFAULT_USER=erabinovich
-export ANDROID_HOME=/Users/erabinovich/Library/Android/sdk
+export DEFAULT_USER=$(whoami)
 
 # TABCOLOR=$(echo -e "\033]6;1;bg;red;brightness;130\a\033]6;1;bg;blue;brightness;130\a\033]6;1;bg;green;brightness;255\a")
 # PROMPT=$TABCOLOR$PROMPT
 
-eval "$(thefuck --alias)"
-
-alias release="ssh backup -t 'bash -ic tmux-release'"
 export HISTCONTROL=ignoreboth
-alias activator=~/Eclipse\\\ Workspace/activator-1.3.10-minimal/bin/activator
-
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 export PATH="/usr/local/sbin:$PATH"
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
-
 export PATH="bin:node_modules/.bin:$PATH"
 
 man() {

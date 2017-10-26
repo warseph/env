@@ -8,10 +8,8 @@ brew tap caskroom/cask
 
 # Command line
 brew install git
-ln -s .zshrc ~/.
 brew install zsh
 brew install task
-brew install thefuck
 brew install ag
 brew install httpie
 
@@ -24,13 +22,15 @@ brew cask install dropbox
 
 # Communication
 brew cask install franz
-brew cask install viber
 
 # Development
 brew cask install iterm2
 brew cask install sequel-pro
 brew cask install sublime-text
 brew cask install pophub
+brew cask install visual-studio-code
+brew cask install docker
+brew cask install postico
 
 # Utilities
 brew cask install istat-menus
@@ -39,3 +39,8 @@ brew cask install spotify
 
 # pip
 curl https://bootstrap.pypa.io/get-pip.py | sudo python
+
+# Setup ZSH
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+ln -s .zshrc ~/.
+sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
